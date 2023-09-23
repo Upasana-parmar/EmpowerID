@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - EmpowerIDTest
+name: Build and deploy ASP.Net Core app to Azure Web App - EmpowerIDAPI
 
 on:
   push:
@@ -23,10 +23,10 @@ jobs:
           include-prerelease: true
 
       - name: Build with dotnet
-        run: dotnet build Code/EmpowerID/EmpowerID/EmpowerID.csproj --configuration Release
+        run: dotnet build Code/EmpowerID/EmpowerID.API/EmpowerID.API.csproj --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish Code/EmpowerID/EmpowerID/EmpowerID.csproj -c Release -o ${{env.DOTNET_ROOT}}\myapp
+        run: dotnet publish Code/EmpowerID/EmpowerID.API/EmpowerID.API.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -51,7 +51,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'EmpowerIDTest'
+          app-name: 'EmpowerIDAPI'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C398B9F8767547459980904C362E709E }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2D6E32897B2D4CBF96946D3EB038D966 }}
           package: .
