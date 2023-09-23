@@ -1,8 +1,62 @@
-﻿@{
+﻿@using EmpowerID.ViewModel;
+@model List<EmployeeVM>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome</h1>   
 </div>
+
+<div class="row mt-5 ">
+<div class="col-md-12">
+    <div class="col-md-12 row">
+        <div class="col-md-6 mb-3">
+            <input type="search" class="form-control" placeholder="Search" id="txtSearch" oninput="Search(this)"/>
+               
+        </div>
+            <div class="col-md-1"> <a href="/" class="btn btn-primary">Clear</a></div>
+        <div class="col-md-5 mb-3 text-end">
+            <a href="@Url.Action("Index","Employee")" class="btn btn-primary" >+ Add</a>
+        </div>
+    </div>
+    <div>
+            <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Date Of Birth</th>
+                    <th>Department</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if(Model != null && Model.Any())
+                    {
+                        foreach (var empolyee in Model)
+                        {
+                            <tr>
+                                <td>@empolyee.Name</td>
+                                <td>@empolyee.Email</td>
+                                <td>@empolyee.DateOfBirth.ToString("dd MMM yyyy")</td>
+                                <td>@empolyee.Department.Name</td>
+                                <td>
+                                    <a href="@Url.Action("index","Employee",new { id = empolyee.Id})" class="btn btn-primary">Edit</a>
+                                    <button data-id="@empolyee.Id" class="btn btn-danger delete">Delete</button>
+                                    </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr><td colspan="5">No Records Found!!!</td></tr>
+                    }
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+@section Scripts{
+    <script src="~/js/employee/employeelist.js" asp-append-version="true"></script>
+}
