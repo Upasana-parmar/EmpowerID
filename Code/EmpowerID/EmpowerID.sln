@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpowerID", "EmpowerID\EmpowerID.csproj", "{577C8E2C-5788-4BB8-9EF7-FF9A291B6D24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmpowerID", "EmpowerID\EmpowerID.csproj", "{577C8E2C-5788-4BB8-9EF7-FF9A291B6D24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpowerID.Data", "EmpowerID.Data\EmpowerID.Data.csproj", "{5D7FFD6F-399E-4C0C-8A2F-183CA7E21A68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmpowerID.Data", "EmpowerID.Data\EmpowerID.Data.csproj", "{5D7FFD6F-399E-4C0C-8A2F-183CA7E21A68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpowerID.Base", "EmpowerID.Base\EmpowerID.Base.csproj", "{44F88FFD-51CF-43CE-8231-626BD468948C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmpowerID.Base", "EmpowerID.Base\EmpowerID.Base.csproj", "{44F88FFD-51CF-43CE-8231-626BD468948C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmpowerID.API", "EmpowerID.API\EmpowerID.API.csproj", "{3359C2C0-6FA2-4B01-B90D-C5E5C6C6D492}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmpowerID.Test", "EmpowerID.Test\EmpowerID.Test.csproj", "{E35581B5-7F8A-4254-8857-3FFAF15D6DA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{44F88FFD-51CF-43CE-8231-626BD468948C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44F88FFD-51CF-43CE-8231-626BD468948C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44F88FFD-51CF-43CE-8231-626BD468948C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3359C2C0-6FA2-4B01-B90D-C5E5C6C6D492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3359C2C0-6FA2-4B01-B90D-C5E5C6C6D492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3359C2C0-6FA2-4B01-B90D-C5E5C6C6D492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3359C2C0-6FA2-4B01-B90D-C5E5C6C6D492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E35581B5-7F8A-4254-8857-3FFAF15D6DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E35581B5-7F8A-4254-8857-3FFAF15D6DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E35581B5-7F8A-4254-8857-3FFAF15D6DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E35581B5-7F8A-4254-8857-3FFAF15D6DA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
